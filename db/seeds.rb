@@ -19,12 +19,14 @@ houses = House.create([
   {title:"rulers of The Vale", name:"Arryn"}
 ])
 
+puts houses[0].name
+
 characters = Character.create([
-  { name:"Robert Baratheon", description: "Patriarch, King of the Seven Kingdoms" },
-  { name:"Balon Greyjoy", description: "Patriarch, Lord of the Iron Islands" },
-  { name:"Doran Martell", description: "Patriarch, Prince of Dorne" },
-  { name:"Daenerys Stark", description: "Matriarch" },
-  { name:"Mace Tyrell", description: "Patriarch, Lord of Highgarden" },
-  { name:"Tywin Lannister", description:"Patriarch, Lord of Casterly Rock, Warden of the West" },
-  { name:"Jon Arryn", description: "Patriarch, former Hand of the King, deceased" }
+  { name:"Robert Baratheon", description: "Patriarch, King of the Seven Kingdoms", house: houses[0] },
+  { name:"Balon Greyjoy", description: "Patriarch, Lord of the Iron Islands", house: houses[1] },
+  { name:"Doran Martell", description: "Patriarch, Prince of Dorne", house: houses[2] },
+  { name:"Daenerys Stark", description: "Matriarch", house: houses[3]},
+  { name:"Mace Tyrell", description: "Patriarch, Lord of Highgarden", house: houses[4] },
+  { name:"Tywin Lannister", description:"Patriarch, Lord of Casterly Rock, Warden of the West", house: houses[5] },
+  { name:"Jon Arryn", description: "Patriarch, former Hand of the King, deceased", house: houses[6] }
 ])

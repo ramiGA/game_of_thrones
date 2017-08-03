@@ -1,2 +1,4 @@
-<h1>Characters#show</h1>
-<p>Find me in app/views/characters/show.html.erb</p>
+<h2><%= @character.title %> <%= link_to "(edit)", edit_house_character_path(@character.house, @character) %></h2>
+<h3>By: <%= @character.house.name %></h3>
+
+Description: <%= @character.description %></br>

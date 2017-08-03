@@ -18,8 +18,10 @@ ActiveRecord::Schema.define(version: 20170803001048) do
   create_table "characters", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.bigint "house_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["house_id"], name: "index_characters_on_house_id"
   end
 
   create_table "houses", force: :cascade do |t|

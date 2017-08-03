@@ -4,3 +4,8 @@
  font-family: "thrones";
  src: url('game_of_thrones.ttf') format("truetype");
 }
+
+body {
+  font-family: "thrones";
+  background: skyblue;
+}

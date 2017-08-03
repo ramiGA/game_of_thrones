@@ -1,2 +1,9 @@
-<p><%@houses.each do |house|%> </p>
-<p><%=house%></p>
+<h2>Characters <%= link_to "(+)", new_character_path %></h2>
+
+<ul>
+  <% @characters.each do |character| %>
+    <li>
+      <%= link_to "#{character.title} - #{character.house.name}", character %>
+    </li>
+  <% end %>
+</ul>

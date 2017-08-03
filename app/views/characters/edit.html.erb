@@ -1,2 +1,14 @@
-<h1>Characters#edit</h1>
-<p>Find me in app/views/characters/edit.html.erb</p>
+<h2>Edit character</h2>
+
+<%= form_for [@house, @character] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.submit %>
+<% end %>
+
+<%= form_for [@house, @character], method: :delete do |f| %>
+  <%= f.submit "Delete!", class: "delete" %>
+<% end %>

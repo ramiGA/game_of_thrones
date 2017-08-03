@@ -1,12 +1,13 @@
-<!-- <h2><%= @house.name %> <%= link_to "(edit)", edit_house_path(@house) %></h2> -->
+<h2><%= @house.name %> <%= link_to "(edit)", edit_house_path(@house) %></h2>
 <h4><%= @house.title %></h4>
-<!-- <h3>Character <%= link_to "(+)", new_house_character_path(@house) %></h3> -->
+<h3>Character <%= link_to "(+)", new_house_character_path(@house) %></h3>
 
 <ul>
-  <% @houses.characters.each do |character| %>
+  <% @house.characters.each do |character| %>
     <li>
       <%= character.name %>
+      <%= character.description%>
     </li>
   <% end %>
 </ul>
-<!-- house_character_path	 -->
+<!-- house_character_path
